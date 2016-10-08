@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel . --out-dir compiled --presets=es2015,react --ignore=node_modules,compiled,server.js --source-maps inline",
+    "start": "node index.js",
+    "build": "babel ./views/components --out-dir ./compiled/views --presets=es2015,react --ignore=node_modules,compiled,server.js --source-maps inline",
     "test": "live-server --open=./SpecRunner.html --port=8081",
     "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash"
   },
@@ -26,9 +27,6 @@
     "mocha": "2.3.3",
     "sinon": "^1.17.3"
   },
-  "scripts": {
-    "start": "node index.js"
-	},
   "author": "Andrew Sherman",
   "license": "MIT"
 }
